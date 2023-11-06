@@ -1,0 +1,357 @@
+//** Navbar Section **/
+.fixed-top {
+    .navbar {
+        background-color: var(--color-light-green);
+        padding: 0px;
+        --bs-navbar-toggler-border-color: var(--color-body-bg);
+
+        .next {
+            cursor: pointer;
+        }
+
+        .block {
+            display: block;
+        }
+
+        .none {
+            display: none;
+        }
+
+        .nav-link.show {
+            color: white;
+        }
+
+        .container-fluid {
+            .navbar-brand {
+                padding: 0px;
+                cursor: pointer;
+
+                img {
+                    width: 90px;
+                    height: 70px;
+                    padding-bottom: 3px;
+                }
+            }
+
+            .navbar-toggler {
+                .navbar-toggler-icon {
+                    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+                }
+            }
+
+            .navbar-toggler:focus {
+                box-shadow: 0.2px 0.2px 0.2px white
+            }
+
+            .offcanvas {
+                background-color: var(--color-light-green);
+
+
+                .offcanvas-header {
+                    .offcanvas-title {
+                        color: var(--color-body-bg);
+                    }
+                }
+
+                .offcanvas-body {
+                    margin: 0px;
+
+                    .navbar-nav {
+                        font-weight: bold;
+                        --bs-nav-link-color: white;
+                        --bs-nav-link-hover-color: white;
+
+                        .nav-item {
+                            padding-top: 15px;
+                            padding-bottom: 15px;
+                        }
+
+                        .dropdown-menu[data-bs-popper] {
+                            top: 94%;
+                        }
+
+                        .dropstart {
+                            .user-button {
+                                font-size: 25px;
+                            }
+
+                            .user-menu {
+                                padding: 0;
+
+                                .credentials {
+                                    border-bottom: 3px solid white;
+
+                                    .head {
+                                        margin-right: 5px;
+                                    }
+                                }
+
+                                .credentials:hover {
+                                    background-color: var(--color-light-green);
+                                }
+                            }
+                        }
+
+                        .dropdown-menu {
+                            background-color: var(--color-light-green);
+                            margin-top: 0;
+                            --bs-dropdown-border-width: 2px;
+                            --bs-dropdown-border-color: var(--color-navbar-green2);
+
+                            .dropdown-item {
+                                background-color: var(--color-light-green);
+                                color: white;
+                                font-weight: bold;
+                                padding-top: 15px;
+                                padding-bottom: 15px;
+                            }
+
+                            .dropdown-item:hover {
+                                background-color: var(--color-navbar-green2);
+                            }
+                        }
+
+                        .a:hover {
+                            background-color: var(--color-navbar-green2);
+                            cursor: pointer;
+                        }
+
+                        .b:hover {
+                            background-color: var(--color-navbar-green2);
+                        }
+
+                        .c {
+                            padding-top: 0;
+                            padding-bottom: 0px;
+                            padding-right: 10px;
+                            display: flex;
+                            gap: 10px;
+                            cursor: pointer;
+
+                            .cart-label {
+                                font-size: 16px;
+                                margin-top: 10px;
+                                display: none;
+                            }
+
+                            .cart-button {
+                                font-size: 30px;
+
+                                .badge {
+                                    --bs-badge-padding-x: 0.34em;
+                                    --bs-badge-padding-y: 0.15em;
+                                    --bs-badge-font-size: 0.5em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .progress-container {
+        width: 100%;
+        height: 8px;
+        background: white opacity($color: white);
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .progress-bar {
+            height: 8px;
+            background: var(--color-red);
+            width: 0%;
+        }
+
+        img {
+            width: 22px;
+            height: 22px;
+        }
+    }
+}
+
+//** Navbar Section End **/
+
+//** Cart offcanvas Section **/
+.offcanvas {
+    background-color: var(--color-light-green);
+
+    .btn-danger {
+        font-size: 20px;
+    }
+
+    .offcanvas-amount {
+        color: white;
+        font-weight: 600;
+        font-size: 1.25rem;
+        text-align: center;
+        border-bottom: 3px solid white;
+        margin-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    .menu-error {
+        color: var(--color-red);
+        font-weight: 600;
+        margin: 0;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .offcanvas-header {
+        .btn-close {
+            opacity: 1;
+            align-self: start;
+        }
+
+        .offcanvas-title {
+            color: white;
+
+            .total-wrapper {
+                font-size: 25px;
+                font-weight: 100;
+
+                #total,
+                #total-unit {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .offcanvas-body {
+        color: white;
+
+        .cart-card {
+            max-width: 540px;
+            background-color: var(--color-light-green);
+            border: 2px solid white;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-right: 1rem;
+            padding-left: 0;
+
+            .my-row {
+
+                .img-col {
+                    img {
+                        height: 7rem;
+                        width: 6rem;
+                    }
+                }
+
+                .body-col {
+                    .product-title {
+                        font-weight: 500;
+                        font-size: 25px;
+                    }
+
+                    .card-body {
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        padding-right: 0;
+                        color: white;
+                    }
+
+                    .product-price {
+                        font-weight: 700;
+                        font-size: 20px;
+
+                        .product-error {
+                            display: none;
+                            color: var(--color-red);
+                            font-size: 1rem;
+                            font-weight: 500;
+                        }
+                    }
+
+                    .form-select {
+                        background-color: var(--color-light-green);
+                        color: white;
+                        margin-bottom: 5px;
+                        background-image: url('../../assets/img/down-arrow-svgrepo-com.svg');
+                    }
+
+                    .product-card-text {
+                        font-weight: 500;
+                        font-size: 15px;
+
+                        .unit {
+                            font-weight: 300;
+                            font-size: 13px;
+                        }
+                    }
+
+                    .product-amount {
+                        display: flex;
+                        position: relative;
+                        opacity: 0.9;
+                        margin-top: 10px;
+                        gap: 5px;
+
+                        .input-amount {
+                            width: 60px;
+                            height: 30px;
+                            border: 2px solid rgb(222, 218, 218);
+                            background-color: var(--color-light-green);
+                            border-radius: 4px;
+                            text-align: center;
+                            color: white;
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                .bin-col {
+
+                    i {
+                        cursor: pointer;
+                        margin-left: 50%;
+                        color: white;
+                    }
+
+                    i:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//** Cart offcanvas Section End **/
+
+@media (max-width: 992px) {
+
+    //** Navbar Section **/
+    .navbar {
+        padding: 5px;
+
+        .container-fluid {
+            .offcanvas {
+                .offcanvas-body {
+                    .navbar-nav {
+                        .dropdown-menu {
+                            background-color: var(--color-navbar-green2);
+
+                            .dropdown-item {
+                                background-color: var(--color-navbar-green2);
+                            }
+
+                            .dropdown-item:hover {
+                                background-color: #2b7008;
+                            }
+                        }
+
+                        .b:hover {
+                            background-color: var(--color-light-green);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //** Navbar Section End **/
+}

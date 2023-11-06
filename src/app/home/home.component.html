@@ -1,0 +1,137 @@
+<body>
+    <!-- ======= Carousel Section ======= -->
+
+    <section id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="assets/img/satelitska-pijaca.jpg" class="d-block w-100" alt="Satelitska Market">
+                <div class="carousel-caption d-md-block">
+                    <h3>FIND YOUR MARKET</h3><br>
+                    <h4>Shop for the best fresh food from local producers at Novi Sad Farmers Markets</h4><br>
+                    <a (click)="navigatePage('find-markets')"><button class="btn">Find your market</button></a>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="assets/img/futoska-pijaca.jpg" class="d-block w-100" alt="Futoska Market">
+                <div class="carousel-caption  d-md-block">
+                    <h3>SEE LATEST MARKETS NEWS</h3><br>
+                    <h4>Find more information about markets latest activities</h4><br><br>
+                    <a (click)="navigatePage('news')"><button class="btn">See news</button></a>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="assets/img/petrovaradinska-pijaca.jpg" class="d-block w-100" alt="Petrovaradinska Market">
+                <div class="carousel-caption d-md-block">
+                    <h3>TRY OUT OUR NEW APP</h3><br>
+                    <h4>New app designed to make shopping more easier</h4><br><br>
+                    <a (click)="navigatePage('sign-up')"><button class="btn">Register now</button></a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </section><!-- ======= Carousel Section End ======= -->
+
+    <!-- ======= Vision Section ======= -->
+    <section class="vision">
+        <p>For 30 years, we have been making sure to provide a quality and diverse supply of fresh food and consumer
+            goods for our citizens.</p>
+    </section><!-- ======= Vision Section End ======= -->
+
+    <!-- ======= News Section ======= -->
+    <section class="news">
+        <div class="headline">MARKETS NEWS</div>
+        <div class="card-wrapper">
+            <div class="card">
+                <a (click)="navigateNews('news', 0)" class="link-img-wrapper next">
+                    <img src="assets/img/news-image-1.jpg" class="card-img-top" alt="News 1">
+                </a>
+                <a (click)="navigateNews('news', 0)" class="body-link next">
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2">September 14, 2023</h6>
+                        <p class="card-text">The fourth startup night bazaar at the Fish market</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card drugi-card">
+                <a (click)="navigateNews('news', 1)" class="link-img-wrapper drugi next">
+                    <img src="assets/img/news-image-2.jpg" class="card-img-top drugi" alt="News 2">
+                </a>
+                <a (click)="navigateNews('news', 1)" class="body-link next">
+                    <div class="card-body drugi-body">
+                        <h6 class="card-subtitle mb-2">September 7, 2023</h6>
+                        <p class="card-text">The ninth Fenseraj of flavors</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a (click)="navigateNews('news', 3)" class="link-img-wrapper next">
+                    <img src="assets/img/news-image-3.png" class="card-img-top" alt="News 3">
+                </a>
+                <a (click)="navigateNews('news', 3)" class="body-link next">
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2">June 8, 2023</h6>
+                        <p class="card-text">"Food for the ear" at the Detelinarska market</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section><!-- ======= News Section End ======= -->
+
+    <!-- ======= Location Section ======= -->
+    <section class="location-main">
+        <div class="headline">FIND YOUR MARKET</div>
+        <div class="mapa"><iframe width="100%" height="650" frameborder="0" scrolling="no" marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=650&amp;hl=en&amp;q=pijace%20novi%20sad+(My%20Business%20Name)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                    href="https://www.maps.ie/population/">Population Estimator map</a></iframe></div>
+    </section><!-- ======= Location Section End ======= -->
+
+    <!-- ======= Seasonal Section ======= -->
+    <section class="seasonal">
+        <div class="card-wrapper">
+            <div class="card first">
+                <a (click)="navigatePage('sign-up')" class="link-img-wrapper next"><img src="assets/img/seasonal-image-1.png"
+                        class="card-img" alt="Seasonal 1"></a>
+                <a (click)="navigatePage('sign-up')" class="body-link next">
+                    <div class="card-body">
+                        <p class="card-text">MARKET APP REGISTER</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card second">
+                <a (click)="navigatePage('sign-in')" class="link-img-wrapper next"><img src="assets/img/seasonal-image-2.png"
+                        class="card-img" alt="Seasonal 2"></a>
+                <a (click)="navigatePage('sign-in')" class="body-link next">
+                    <div class="card-body">
+                        <p class="card-text">MARKET APP LOGIN</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card third treci">
+                <a (click)="navigatePage('seasonal-products')" class="link-img-wrapper next"><img
+                        src="assets/img/seasonal-image-3.png" class="card-img" alt="Seasonal 3"></a>
+                <a (click)="navigatePage('seasonal-products')" class="body-link next">
+                    <div class="card-body">
+                        <p class="card-text">SEASONAL PRODUCTS</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section><!-- ======= Seasonal Section End ======= -->
+</body>

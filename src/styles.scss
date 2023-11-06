@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+:root {
+    --margin-start: 15%;
+    --margin-end: 0;
+    --color-body-bg: #efedeb;
+    --color-green-blue: #40b688;
+    --color-news-blue: #6cd1d8;
+    --color-news-dark-blue: #008cba;
+    --color-red: rgb(248, 47, 47);
+    --color-gray: #dcd4cb;
+    --color-final-border: #aaa49c;
+    --color-shop-gray: #dcd4cb;
+    --color-dark-green: #198754;
+    --color-light-green: #59bc28;
+    --color-navbar-green2: #40a20f;
+}

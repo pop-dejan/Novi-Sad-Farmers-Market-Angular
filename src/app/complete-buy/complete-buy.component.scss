@@ -1,0 +1,25 @@
+body {
+    background-color: var(--color-body-bg);
+    padding-top: 171px;
+    padding-bottom: 101px;
+}
+
+//** Complete Buy Section **/
+.complete-buy {
+    text-align: center;
+
+    .p-1 {
+        font-size: 2rem;
+        margin: 0;
+        padding: 0;
+        font-weight: 500;
+    }
+
+    .p-2 {
+        font-size: 1.5rem;
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+
+//** Complete Buy Section End **/

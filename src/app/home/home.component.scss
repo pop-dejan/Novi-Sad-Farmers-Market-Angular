@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+
+body {
+    background-color: var(--color-body-bg);
+    padding-top: 20px;
+}
+
+.next {
+    cursor: pointer;
+}
+
+.animation-left {
+    animation: bounce-in-left 1.4s;
+}
+
+.animation-right {
+    animation: bounce-in-right 1.4s;
+}
+
+@keyframes bounce-in-left {
+    0% {
+        -webkit-transform: translateX(-2000px);
+    }
+
+    60% {
+        -webkit-transform: translateX(30px);
+    }
+
+    80% {
+        -webkit-transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@keyframes bounce-in-right {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(2000px);
+    }
+
+    60% {
+
+        -webkit-transform: translateX(30px);
+    }
+
+    80% {
+        -webkit-transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+//** Carousel Section **/
+.carousel {
+    padding-top: 20px;
+    margin: 70px var(--margin-start) 0;
+
+    .carousel-inner {
+        .carousel-item {
+
+            img {
+                height: 470px;
+                filter: brightness(50%);
+            }
+
+            .carousel-caption {
+                text-align: start;
+
+                h3 {
+                    font-size: 45px;
+                    font-weight: bold;
+                }
+
+                .btn {
+                    font-weight: 600;
+                    color: white;
+                    background-color: orangered;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+//** Carousel Section End**/
+
+//** Vision Section **/
+.vision {
+    margin-left: var(--margin-start);
+    margin-right: var(--margin-start);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    align-items: center;
+
+    p {
+        text-align: center;
+        font-size: clamp(1.25rem, 2.5vw, 2rem);
+        font-weight: 500;
+    }
+}
+
+//** Vision Section End**/
+
+//** Location-main Section **/
+.location-main {
+    margin-left: var(--margin-start);
+    margin-right: var(--margin-start);
+    padding-bottom: 20px;
+    opacity: 0;
+
+    .headline {
+        font-size: 32px;
+        color: white;
+        background-color: orangered;
+        font-weight: 500;
+        padding-left: 20px;
+    }
+
+    .mapa {
+        width: 100%;
+    }
+}
+
+//** Location-main Section End **/
+
+//** News Section **/
+.news {
+    margin-left: var(--margin-start);
+    margin-right: var(--margin-start);
+    padding-bottom: 20px;
+    opacity: 0;
+
+    .headline {
+        font-size: 32px;
+        color: white;
+        background-color: var(--color-green-blue);
+        font-weight: 500;
+        padding-left: 20px;
+    }
+
+    .card-wrapper {
+        display: flex;
+        flex-direction: row;
+
+        .card {
+            background-color: #abebcd;
+            height: 450px;
+            font-family: 'Dosis', sans-serif;
+
+            .link-img-wrapper {
+                overflow: hidden;
+
+                .card-img-top {
+                    border-radius: 0px;
+                    image-rendering: auto;
+                    width: 100%;
+                    height: 100%;
+                    transition: transform 0.3s;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            .drugi {
+                opacity: 0.9;
+            }
+
+            .body-link {
+                text-decoration: none;
+                color: #212529;
+
+                .card-body {
+                    .card-subtitle {
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+
+                    .card-text {
+                        color: black;
+                        margin-top: 40px;
+                        font-size: 21px;
+                        font-weight: 1000;
+                        height: 80px;
+                    }
+                }
+            }
+        }
+
+        .drugi-card {
+            background-color: #c7ebda;
+        }
+    }
+}
+
+//** News Section End**/
+
+//** Seasonal Section **/
+.seasonal {
+    margin-left: var(--margin-start);
+    margin-right: var(--margin-start);
+    padding-bottom: 20px;
+    opacity: 0;
+
+    .card-wrapper {
+        display: flex;
+        flex-direction: row;
+
+        .first {
+            background-color: #00d084;
+        }
+
+        .second {
+            background-color: #eeb259;
+        }
+
+        .third {
+            background-color: #0693e3;
+        }
+
+        .card {
+            height: 350px;
+            border-radius: 0;
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            .link-img-wrapper {
+                overflow: hidden;
+
+                .card-img {
+                    border-radius: 0px;
+                    image-rendering: auto;
+                    width: 100%;
+                    height: 100%;
+                    transition: transform 0.3s;
+                }
+            }
+
+            .body-link {
+                text-decoration: none;
+
+                .card-body {
+                    .card-text {
+                        color: white;
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                        text-align: center;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//** Seasonal Section End**/
+
+@media (max-width: 992px) {
+
+    //** Carousel Section **/
+    .carousel {
+        padding-top: 0;
+        margin: 70px var(--margin-end) 0;
+    }
+
+    //** Carousel Section End **/
+
+    //** Vision Section **/
+    .vision {
+        margin-left: var(--margin-end);
+        margin-right: var(--margin-end);
+    }
+
+    //** Vision Section End **/
+
+    //** Location-main Section **/
+    .location-main {
+        margin-left: var(--margin-end);
+        margin-right: var(--margin-end);
+    }
+
+    //** Location-main Section End **/
+
+    //** News Section **/
+    .news {
+        margin-left: var(--margin-end);
+        margin-right: var(--margin-end);
+    }
+
+    //** News Section End **/
+
+    //** Seasonal Section **/
+    .seasonal {
+        margin-left: var(--margin-end);
+        margin-right: var(--margin-end);
+    }
+
+    //** Seasonal Section End **/
+}
+
+@media (max-width: 770px) {
+
+    //** News Section **/
+    .news {
+        .card-wrapper {
+            .card {
+                height: 350px;
+            }
+        }
+    }
+
+    //** News Section End **/
+
+    //** Seasonal Section **/
+    .seasonal {
+        .card-wrapper {
+            .card {
+                height: 350px;
+            }
+        }
+    }
+
+    //** Seasonal Section End **/
+}
+
+@media (max-width: 562px) {
+
+    //** Carousel Section **/
+    .carousel {
+        .carousel-inner {
+            .carousel-item {
+                .carousel-caption {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    //** Carousel Section End **/
+
+    //** Location-main Section **/
+    .location-main {
+        .headline {
+            text-align: center;
+        }
+    }
+
+    //** Location-main Section End **/
+
+    //** News Section **/
+    .news {
+        .headline {
+            text-align: center;
+        }
+
+        .card-wrapper {
+            .card {
+                height: 500px;
+                margin-bottom: 10px;
+
+                .card-text {
+                    height: 40px;
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+
+    //** News Section End **/
+
+    //** Seasonal Section **/
+    .seasonal {
+        .card-wrapper {
+            .card {
+                height: 500px;
+                margin-bottom: 10px;
+
+                .card-text {
+                    height: 40px;
+                    margin-top: 0px;
+                }
+            }
+
+            .treci {
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    //** Seasonal Section End **/
+}
+
+@media (max-width: 391px) {
+
+    //** Carousel Section **/
+    .carousel {
+        .carousel-inner {
+            .carousel-item {
+                .carousel-caption {
+                    h3 {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    //** Carousel Section End **/
+
+    //** News Section **/
+    .news {
+        .card-wrapper {
+            .card {
+                height: 500px;
+
+                .card-text {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    //** News Section End **/
+
+    //** Seasonal Section **/
+    .seasonal {
+        .card-wrapper {
+            .card {
+                height: 400px;
+
+                .card-body {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    //** Seasonal Section End **/
+}
+
+@media (max-width: 310px) {
+
+    .news {
+        .card-wrapper {
+            .card {
+                height: 400px;
+
+                .card-text {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    //** News Section End **/
+}

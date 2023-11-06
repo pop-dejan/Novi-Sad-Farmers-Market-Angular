@@ -1,0 +1,113 @@
+<!-- ======= Navbar Section ======= -->
+<header class="fixed-top">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand mr-5" id="navbar-brand" (click)="navigatePage('home')">
+                <img src="assets/img/logo-icon.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item b dropdown link mx-3">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Markets
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li data-bs-dismiss="offcanvas" *ngFor="let market of markets"><a class="dropdown-item next"
+                                        (click)="navigateMarkets('markets', market.id-1)">{{market.headline.split(' ')[0]}}</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item a mx-3 link" data-bs-dismiss="offcanvas">
+                            <a class="nav-link" (click)="navigatePage('find-markets')">Find Markets</a>
+                        </li>
+                        <li class="nav-item a mx-3 link" data-bs-dismiss="offcanvas">
+                            <a class="nav-link" (click)="navigatePage('news')">News</a>
+                        </li>
+                        <li class="nav-item a mx-3 link" data-bs-dismiss="offcanvas">
+                            <a class="nav-link" (click)="navigatePage('market-barometer')">Market Barometer</a>
+                        </li>
+                        <li class="nav-item a mx-3 link" data-bs-dismiss="offcanvas">
+                            <a class="nav-link" (click)="navigatePage('seasonal-products')">Seasonal Products</a>
+                        </li>
+                        <li class="nav-item a mx-3 link" data-bs-dismiss="offcanvas">
+                            <a class="nav-link" (click)="navigatePage('about')">About</a>
+                        </li>
+                        <li class="nav-item a  link" *ngIf="seeProducts" (click)="loadUser()" data-bs-dismiss="offcanvas">
+                            <a class="nav-link">Shop</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto mx-3 link">
+                        <li class="nav-item a" data-bs-dismiss="offcanvas">
+                            <a class="nav-link" (click)="navigatePage('sign-up')">Sign Up</a>
+                        </li>
+                        <li class="nav-item a" data-bs-dismiss="offcanvas">
+                            <a class="nav-link" (click)="navigatePage('sign-in')">Sign In</a>
+                        </li>
+                        
+                        <li class="nav-item b dropstart link" id="user-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-user user-button" style="color: #ffffff;"></i>
+                            </a>
+                            <ul class="dropdown-menu user-menu">
+                                <div class="credentials dropdown-item">
+                                    <span class="head">User:</span><span>{{user.username}}</span> <br><br>
+                                    <span class="head">Email:</span><span>{{user.email}}</span>
+                                </div>
+                                <li (click)="signOut()" data-bs-dismiss="offcanvas">
+                                    <a class="dropdown-item next">Sign Out</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item a" id="cart-button" data-bs-dismiss="offcanvas">
+                            <a class="nav-link c" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                aria-controls="offcanvasRight">
+                                <i class="bi bi-basket3 position-relative cart-button">
+                                    <span
+                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger none"></span>
+                                </i>
+                                <p class="cart-label">CART</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+        <img src="assets/img/tomato-icon.png" alt="Tomato">
+    </div>
+</header><!-- ======= Navbar Section End ======= -->
+
+<!-- ======= Cart offcanvas Section ======= -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" #offcanvasRight aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <div class="offcanvas-title" id="offcanvasRightLabel">
+            <div class="total-wrapper">Total: <span id="total">0</span><span id="total-unit"> din</span></div>
+        </div>
+        <button type="button" id="innerOffcanvasBtn" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+    </div>
+    <button class="btn btn-success mx-3 fw-bold buy-btn" data-bs-dismiss="offcanvas"
+    aria-label="Close" (click)="proceedToCart()">PROCEED TO
+        CHECKOUT</button>
+    <p class="menu-error"></p>
+    <p class="offcanvas-amount"><span class="counter">0</span> items in cart</p> 
+    <div class="offcanvas-body" id="my-offcanvas-cart">
+    </div>
+</div>
+
+<!-- ======= Cart offcanvas Section End ======= -->

@@ -1,0 +1,30 @@
+<body>
+    <!-- ======= Image Title Section ======= -->
+    <section class="image-title">
+        <h1 class="headline">WELCOME TO OUR NEW APP<br><span id="user">{{user.username}}</span></h1>
+    </section><!-- ======= Image Title Section End ======= -->
+
+    <!-- ======= Categories Section ======= -->
+    <section class="categories">
+        <div class="headline-wrapper">
+            <h2>Product categories</h2>
+            <p>choose the category</p>
+        </div>
+
+        <div class="kategorija-wrapper">
+            <a class="kategorija kl" id="vegetables-link" (click)="Vegetables()">
+                <img src="assets/img/app-img/vegetables-app-img.jpg" alt="Vegetables">
+                <h5>VEGETABLES</h5>
+            </a>
+            <a class="kategorija kl" id="fruits-link">
+                <img src="assets/img/app-img/fruits-app-img.jpg" alt="Fruit" (click)="Fruits()">
+                <h5>FRUITS</h5>
+            </a>
+            <a class="kategorija kl" id="other-link">
+                <img src="assets/img/app-img/other-app-img.jpg" alt="Other" (click)="Other()">
+                <h5>OTHER</h5>
+            </a>
+        </div>
+
+    </section><!-- ======= Categories Section End ======= -->
+</body>

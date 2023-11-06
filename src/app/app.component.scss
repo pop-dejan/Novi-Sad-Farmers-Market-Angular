@@ -1,0 +1,23 @@
+//** Scroll button **//
+.scroll-btn {
+    border-radius: 50%;
+    padding: 15px;
+    z-index: 99;
+    position: fixed;
+    margin-left: calc(100vw - 110px);
+    margin-top: calc(100vh - 90px);
+
+    .fa-solid {
+        color: #ffffff;
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .scroll-btn {
+        margin-left: calc(100vw - 90px);
+    }
+}
+
+//** Scroll button End **/

@@ -1,0 +1,24 @@
+<body>
+    <!-- ======= Image Title Section ======= -->
+    <section class="image-title">
+        <h1 class="headline">NEWS</h1>
+    </section><!-- ======= Image Title Section End ======= -->
+
+    <!-- ======= News Info Section ======= -->
+    <section class="news-info animation-fade-in">
+        <h2 class="headline">{{newsUnit.headline}}</h2>
+        <p class="date">{{newsUnit.date}}</p>
+
+        <img src="{{newsUnit.imgSrc}}" alt="{{newsUnit.imgAlt}}">
+
+        <p class="text">{{newsUnit.text}}</p>
+
+        <ul class="text" *ngIf="newsUnit.text2">
+            <li *ngIf="newsUnit.text2[0]">{{newsUnit.text2[0]}}</li>
+            <li *ngIf="newsUnit.text2[1]">{{newsUnit.text2[1]}}</li>
+            <li *ngIf="newsUnit.text2[2]">{{newsUnit.text2[2]}}</li>
+        </ul>
+
+        <img src="{{newsUnit.imgSrc2}}" alt="{{newsUnit.imgAlt2}}" *ngIf="newsUnit.imgSrc2">
+    </section><!-- ======= News Info Section End ======= -->
+</body>

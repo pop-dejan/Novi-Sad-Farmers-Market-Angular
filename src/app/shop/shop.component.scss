@@ -1,0 +1,267 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+body {
+    background-color: var(--color-body-bg);
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.block {
+    display: block;
+}
+
+.none {
+    display: none;
+}
+
+//** Image-Title Section **/
+.image-title {
+    background-color: var(--color-dark-green);
+    margin: 70px var(--margin-start) 0;
+    min-height: 250px;
+    display: flex;
+
+    .headline {
+        text-align: center;
+        align-self: center;
+        font-size: 60px;
+        color: white;
+        font-weight: 500;
+        width: 100%;
+    }
+}
+
+//** Image-Title Section End **/
+
+//** Buy Section **/
+.buy {
+
+    .scroll-btn {
+        position: fixed;
+        border-radius: 50%;
+        padding: 15px;
+
+
+        .fa-solid {
+            color: #ffffff;
+            font-size: 25px;
+        }
+    }
+
+    .cards-headline-wrapper {
+        text-align: center;
+        margin-top: 20px;
+
+        h2 {
+            font-size: 50px;
+            font-size: 600;
+        }
+
+        p {
+            font-size: 30px;
+            font-weight: 500;
+        }
+    }
+
+    .buttons-wrapper {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .card-wrapper {
+        background-color: var(--color-shop-gray);
+        margin: 20px var(--margin-start) 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        box-shadow: 0 0 8px 0 var(--color-shop-gray);
+        gap: var(--bs-gap, 0.5rem);
+
+        .my-card {
+            background-color: var(--color-shop-gray);
+            border: 2px solid var(--color-light-green);
+            margin-bottom: 20px;
+
+            .card-img-top {
+                height: 14rem;
+                padding-bottom: 2rem;
+            }
+
+            .card-body {
+                padding: 6px;
+
+                .card-title {
+                    font-size: 22px;
+                    font-weight: 700;
+                    height: 60px;
+                }
+
+                .form-select {
+                    background-color: var(--color-shop-gray);
+                    border-color: var(--color-light-green);
+                }
+
+                .card-text {
+                    color: var(--color-dark-green);
+                    margin-top: 1rem;
+                    margin-bottom: 0rem;
+
+                    .price {
+                        font-size: 25px;
+                        font-weight: 700;
+                    }
+
+                    .unit {
+                        font-size: 15px;
+                    }
+
+                    .input-message {
+                        color: var(--color-red);
+                        margin-bottom: 0;
+                        height: 24px;
+                        font-size: 15px;
+                        display: block;
+                    }
+                }
+
+                .amount-wrapper {
+                    display: flex;
+                    justify-content: center;
+
+                    .amount-input {
+                        width: 25%;
+                        border: 1px solid var(--color-light-green);
+                        border-radius: 0;
+                        padding-left: 5px;
+                        outline: none;
+                        text-align: center;
+                    }
+
+                    .amount-button {
+                        border-radius: 0;
+                        width: 75%;
+
+                        .bi-cart4 {
+                            vertical-align: 0.05em;
+                        }
+                    }
+
+                    .btn-success {
+                        --bs-btn-bg: var(--color-light-green);
+                        --bs-btn-hover-bg: #69bc40;
+                        --bs-btn-border-color: #69bc40;
+                        --bs-btn-hover-border-color: #69bc40;
+                        --bs-btn-active-bg: #69bc40;
+                        --bs-btn-hover-color: #efedeb;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//** Buy Section End **/
+
+@media (max-width: 992px) {
+
+    //** Image-Title Section **/
+    .image-title {
+        margin: 70px var(--margin-end) 0;
+    }
+
+    //** Image-Title Section End **/
+
+    //** Buy Section **/
+    .buy {
+        .cards-headline-wrapper {
+
+            h2 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+
+        .card-wrapper {
+            margin-left: var(--margin-end);
+            margin-right: var(--margin-end);
+
+            .my-card {
+                .card-img-top {
+                    height: 15rem;
+                }
+            }
+        }
+    }
+
+    //** Buy Section End **/
+
+}
+
+@media (max-width:560px) {
+
+    //** Image-Title Section **/
+    .image-title {
+        .headline {
+            padding: 5px;
+            font-size: 45px;
+        }
+    }
+
+    //** Image-Title Section End **/
+
+    //** Buy Section **/
+    .buy {
+        .cards-headline-wrapper {
+
+            h2 {
+                font-size: 35px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .card-wrapper {
+            .my-card {
+                .card-img-top {
+                    height: 10rem;
+                }
+            }
+        }
+    }
+
+    //** Buy Section End **/
+}
+
+@media (max-width:440px) {
+
+    //** Buy Section **/
+    .buy {
+        .card-wrapper {
+            padding: 10px;
+
+            .my-card {
+                .card-body {
+                    .amount-wrapper {
+                        .amount-input {
+                            width: 30%;
+                        }
+
+                        .amount-button {
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //** Buy Section End **/
+}

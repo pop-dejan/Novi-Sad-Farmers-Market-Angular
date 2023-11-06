@@ -1,0 +1,76 @@
+<body>
+    
+    <!-- ======= Image Title Section ======= -->
+    <section class="image-title">
+        <h1 class="headline">Novi Sad Farmers Market App</h1>
+    </section><!-- ======= Image Title Section End ======= -->
+
+     <!-- ======= Final Section ======= -->
+     <form class="final-section" [formGroup]="myForm">
+        <div class="final-title">CART</div>
+        <div class="order-wrapper">
+            <span class="w-title">
+                <span>Order overview:</span>
+                <span class="back-btn-wrap">
+                    <button class="btn btn-success back-btn" type="button" (click)="backToProducts()">Back to products</button>
+                </span>
+            </span>
+
+            <div class="items-wrapper"></div>
+
+            <div class="p-total-row">
+                <span class="first">Total</span>
+                <span class="second">
+                    <span class="p-total"></span>
+                    <span> din</span>
+                </span>
+            </div>
+            <div class="ship-row">
+                <span class="first">Shipping fee</span>
+                <span class="second">
+                    <span class="ship-total"></span>
+                    <span> din</span>
+                </span>
+            </div>
+            <div class="tax-row">
+                <span class="first">Tax</span>
+                <span class="second">
+                    <span class="tax-total"></span>
+                    <span> din</span>
+                </span>
+            </div>
+            <div class="total-row">
+                <span class="first">Total with fees</span>
+                <span class="second">
+                    <span class="total-items"></span>
+                    <span> din</span>
+                </span>
+            </div>
+            <div class="address-row">
+                <label class="first" for="finalName">Name and surname</label>
+                <input type="text" class="second" id="finalName" formControlName="finalName" class="form-control second control-3"
+                 (input)="toggleInputName()">
+                <p class="error-buy name-error none">Please enter name and surname!</p>
+            </div>
+            <div class="address-row">
+                <label class="first" for="finalAddress">Delivery address</label>
+                <input type="text" id="finalAddress" formControlName="finalAddress" class="form-control second control-3"
+                (input)="toggleInputAddress()">
+                <p class="error-buy address-error none">Please enter delivery address!</p>
+            </div>
+            <div class="address-row">
+                <label class="first" for="finalTelephone">Telephone (format: 0631245715)</label>
+                <input type="tel" id="finalTelephone" formControlName="finalTelephone" class="form-control second control-3"
+                (input)="toggleInputTelephone()">
+                <p class="error-buy telephone-error none">Please enter contact telephone!</p>
+                <p class="error-buy telephone-error2 none">Please enter valid telephone number!</p>
+            </div>
+            <div class="textarea-row">
+                <p class="first final-note" for="finalNote">Note</p>
+                <textarea name="textarea" class="form-control second" id="finalNote" formControlName="finalNote" rows="5"></textarea>
+                <p class="error-buy blank-cart-error none">There is no products in cart!</p>
+            </div>
+            <div class="btn-wrap"><button class="btn btn-danger purchase-btn" type="submit" (click)="onSubmit($event)">BUY</button></div>
+        </div>
+    </form><!-- ======= Final Section End ======= -->
+</body>

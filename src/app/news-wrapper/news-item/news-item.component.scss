@@ -1,0 +1,131 @@
+body {
+    background-color: var(--color-body-bg);
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animation-fade-in {
+    animation: fade-in ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+//** Image-Title Section **/
+.image-title {
+    background-color: var(--color-news-blue);
+    background-position: 50%;
+    margin: 70px var(--margin-start) 0;
+    min-height: 250px;
+    display: flex;
+
+    .headline {
+        text-align: center;
+        align-self: center;
+        font-size: 80px;
+        color: white;
+        font-weight: 500;
+        width: 100%;
+    }
+}
+
+//** Image-Title Section End **/
+
+//** News-Info Section **/
+.news-info {
+    margin: 40px 25% 0;
+
+    .headline {
+        font-size: 38px;
+        font-weight: 600;
+    }
+
+    .date {
+        font-size: 20px;
+        font-weight: 500;
+        opacity: 0.5;
+    }
+
+    img {
+        margin: 1% auto;
+        width: 100%;
+        height: 400px;
+    }
+
+    .text {
+        font-size: 20px;
+        padding-top: 10px;
+        font-weight: 400;
+        text-align: justify;
+    }
+}
+
+//** News-Info Section End **/
+
+//** Footer Section End **/
+
+@media (max-width: 992px) {
+
+    //** Image-Title Section **/
+    .image-title {
+        margin-top: 70px;
+        margin-left: var(--margin-end);
+        margin-right: var(--margin-end);
+    }
+
+    //** Image-Title Section End **/
+
+    //** News-Info Section **/
+    .news-info {
+        margin: 70px var(--margin-end) 0;
+        padding: 10px;
+
+        img {
+            height: 500px;
+        }
+    }
+
+    //** News-Info Section End **/
+}
+
+@media (max-width: 600px) {
+
+    //** Image-Title Section **/
+    .image-title {
+        .headline {
+            font-size: 60px;
+        }
+    }
+
+    //** Image-Title Section End **/
+
+    //** News-Info Section **/
+    .news-info {
+        img {
+            height: 400px;
+        }
+    }
+
+    //** News-Info Section End **/
+}
+
+@media (max-width: 350px) {
+
+    //** News-Info Section **/
+    .news-info {
+        img {
+            height: 300px;
+        }
+    }
+
+    //** News-Info Section End **/
+}

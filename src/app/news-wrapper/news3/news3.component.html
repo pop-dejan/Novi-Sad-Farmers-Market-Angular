@@ -1,0 +1,41 @@
+<body>
+    <!-- ======= Image Title Section ======= -->
+    <section class="image-title">
+        <h1 class="headline">NEWS</h1>
+    </section><!-- ======= Image Title Section End ======= -->
+
+    <!-- ======= News Info Section ======= -->
+    <section class="news-info" *ngFor="let newsUnit of newsSlice; let i = index" id="news{{i}}" #itemElement>
+        <a (click)="navigatePage('news', newsUnit.id-1)" class="headline-link next">
+            <h2 class="headline">{{newsUnit.headline}}</h2>
+        </a>
+        <p class="date">{{newsUnit.date}}</p>
+
+        <img src="{{newsUnit.imgSrc}}" alt="{{newsUnit.imgAlt}}">
+
+        <p class="text">{{newsUnit.text.slice(0,145)}} […]</p>
+
+        <a (click)="navigatePage('news', newsUnit.id-1)" class="read-more-link next">
+            <p class="text-link">Read More</p>
+        </a>
+    </section><!-- ======= News Info Section End ======= -->
+
+    <!-- ======= Pagination Section ======= -->
+    <nav class="mypagination" aria-label="Page navigation example">
+        <ul class="pagination pagination-lg justify-content-center">
+            <li class="page-item">
+                <a class="page-link" (click)="navigatePage2('news2')" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" (click)="navigatePage2('news')">1</a></li>
+            <li class="page-item"><a class="page-link" (click)="navigatePage2('news2')">2</a></li>
+            <li class="page-item active" aria-current="page"><a class="page-link" (click)="navigatePage2('news3')">3</a></li>
+            <li class="page-item disabled">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav><!-- ======= Pagination Section End ======= -->
+</body>

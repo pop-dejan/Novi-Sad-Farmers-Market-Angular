@@ -1,0 +1,828 @@
+<body>
+    <!-- ======= Image Title Section ======= -->
+    <section class="image-title">
+        <h1 class="headline">MARKETS BAROMETER</h1>
+    </section><!-- ======= Image Title Section End ======= -->
+
+    <!-- ======= Vision Section ======= -->
+    <section class="vision">
+        <p>Here you can find prices of products in different markets.</p>
+    </section><!-- ======= Vision Section End ======= -->
+
+    <!-- ======= Buttons-Wrapper Section ======= -->
+    <section class="btn-group buttons-wrapper" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked
+            (click)="vegetablesShow()">
+        <label class="btn btn-outline-success cb" id="mybutton1" for="btnradio1">Vegetables</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" (click)="fruitsShow()">
+        <label class="btn btn-outline-success cb" id="mybutton2" for="btnradio2">Fruits</label>
+
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" (click)="otherShow()">
+        <label class="btn btn-outline-success cb" id="mybutton3" for="btnradio3">Other</label>
+    </section><!-- ======= Buttons-Wrapper Section ======= -->
+
+    <!-- ======= Tables Section ======= -->
+    <section class="all-tables-wrapper hidden">
+        <div class="table-wrapper vegetables animation-fade-in" id="vegetables" *ngIf="vegetables">
+            <table>
+                <tbody>
+                    <tr>
+                        <th class="date">
+                            <input type="date" id="date" [valueAsDate]="currentD">
+                        </th>
+                        <th class="markets">FUTOŠKA</th>
+                        <th class="markets">LIMANSKA</th>
+                        <th class="markets">KVANTAŠKA<br> (wholesale price)</th>
+                        <th class="markets">DETELINARSKA</th>
+                        <th class="markets">SATELITSKA</th>
+                        <th class="markets">RIBLJA</th>
+                    </tr>
+                    <tr>
+                        <td>Garlic</td>
+                        <td>/</td>
+                        <td>30-50 din. for peace</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td>Chards</td>
+                        <td>100 din. for bond</td>
+                        <td>80 din. for bond</td>
+                        <td>30-40 din. for bond</td>
+                        <td>70 din. for bond</td>
+                        <td>60-70 din. for bond</td>
+                        <td>70-80 din. for bond</td>
+                    </tr>
+                    <tr>
+                        <td>Green beans</td>
+                        <td>300 <span>din. for kg</span></td>
+                        <td>300-350 <span>din. for kg</span></td>
+                        <td>130-150 <span>din. for kg</span></td>
+                        <td>250 <span>din. for kg</span></td>
+                        <td>200-300 <span>din. for kg</span></td>
+                        <td>300-350 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Broccoli</td>
+                        <td>300 <span>din. for kg</span></td>
+                        <td>400 <span>din. for kg</span></td>
+                        <td>180 <span>din. for kg</span></td>
+                        <td>350 <span>din. for kg</span></td>
+                        <td>350 <span>din. for kg</span></td>
+                        <td>400 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Pumpkin</td>
+                        <td>120-250 <span>din. for kg</span></td>
+                        <td>120-200 <span>din. for kg</span></td>
+                        <td>60-70 <span>din. for kg</span></td>
+                        <td>100-200 <span>din. for kg</span></td>
+                        <td>150 <span>din. for kg</span></td>
+                        <td>150-250 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Celery</td>
+                        <td>300 <span>din. for kg</span></td>
+                        <td>300 <span>din. for kg</span></td>
+                        <td>100-120 <span>din. for kg</span></td>
+                        <td>300-350 <span>din. for kg</span></td>
+                        <td>290 <span>din. for kg</span></td>
+                        <td>250-300 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>Cherry </span>tomatoes</td>
+                        <td>400 <span>din. for kg</span></td>
+                        <td>500 <span>din. for kg</span></td>
+                        <td>200-300 <span>din. for kg</span></td>
+                        <td>430 <span>din. for kg</span></td>
+                        <td>550 <span>din. for kg</span></td>
+                        <td>500-600 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Onions</td>
+                        <td>100 <span>din. for kg</span></td>
+                        <td>100-150 <span>din. for kg</span></td>
+                        <td>50-60 <span>din. for kg</span></td>
+                        <td>100-150 <span>din. for kg</span></td>
+                        <td>130 <span>din. for kg</span></td>
+                        <td>120 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Beets</td>
+                        <td>150 <span>din. for kg</span></td>
+                        <td>100-120 <span>din. for kg</span></td>
+                        <td>50-70 <span>din. for kg</span></td>
+                        <td>120 <span>din. for kg</span></td>
+                        <td>150 <span>din. for kg</span></td>
+                        <td>150 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Peas</td>
+                        <td>/</td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>300 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Cauliflower</td>
+                        <td>150-180 <span>din. for kg</span></td>
+                        <td>200-250 <span>din. for kg</span></td>
+                        <td>100-130 <span>din. for kg</span></td>
+                        <td>200 <span>din. for kg</span></td>
+                        <td>120-180 <span>din. for kg</span></td>
+                        <td>150-250 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Turnip cabbage</td>
+                        <td>100 din. for peace</td>
+                        <td>80-100 din. for peace</td>
+                        <td>40-50 din. for peace</td>
+                        <td>80 din. for peace</td>
+                        <td>90-100 din. for peace</td>
+                        <td>80 din. for peace</td>
+                    </tr>
+                    <tr>
+                        <td>Kale</td>
+                        <td>150 <span>din. for kg</span></td>
+                        <td>200-250 <span>din. for kg</span></td>
+                        <td>100-130 <span>din. for kg</span></td>
+                        <td>230 <span>din. for kg</span></td>
+                        <td>250 <span>din. for kg</span></td>
+                        <td>200-250 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Sauerkraut</td>
+                        <td>350 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>/</td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Cornichons</td>
+                        <td>170-200 <span>din. for kg</span></td>
+                        <td>200 <span>din. for kg</span></td>
+                        <td>100-110 <span>din. for kg</span></td>
+                        <td>150-200 <span>din. for kg</span></td>
+                        <td>200-250 <span>din. for kg</span></td>
+                        <td>200-250 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Cucumbers</td>
+                        <td>100-150 <span>din. for kg</span></td>
+                        <td>100-150 <span>din. for kg</span></td>
+                        <td>50-70 <span>din. for kg</span></td>
+                        <td>150-180 <span>din. for kg</span></td>
+                        <td>100-130 <span>din. for kg</span></td>
+                        <td>130-150 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Potatoes</td>
+                        <td>100 <span>din. for kg</span></td>
+                        <td>100-150 <span>din. for kg</span></td>
+                        <td>60 <span>din. for kg</span></td>
+                        <td>100-150 <span>din. for kg</span></td>
+                        <td>130 <span>din. for kg</span></td>
+                        <td>120 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Corn</td>
+                        <td>50 din. for peace</td>
+                        <td>50-70 din. for peace</td>
+                        <td>25-30 din. for peace</td>
+                        <td>50 din. for peace</td>
+                        <td>50 din. for peace</td>
+                        <td>50 din. for peace</td>
+                    </tr>
+                    <tr>
+                        <td>Cabbage</td>
+                        <td>100 <span>din. for kg</span></td>
+                        <td>100 <span>din. for kg</span></td>
+                        <td>40-50 <span>din. for kg</span></td>
+                        <td>80-130 <span>din. for kg</span></td>
+                        <td>100 <span>din. for kg</span></td>
+                        <td>100 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Hot peppers</td>
+                        <td>30 din. for peace</td>
+                        <td>20-40 din. for peace</td>
+                        <td>10-20 din. for peace</td>
+                        <td>30-50 din. for peace</td>
+                        <td>30-40 din. for peace</td>
+                        <td>20-30 din. for peace</td>
+                    </tr>
+                    <tr>
+                        <td>New potatoes</td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>100 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Spring onions</td>
+                        <td>80-100 din. for bond</td>
+                        <td>70-80 din. for bond</td>
+                        <td>25-45 din. for bond</td>
+                        <td>70-90 din. for bond</td>
+                        <td>70 din. for bond</td>
+                        <td>80-100 din. for bond</td>
+                    </tr>
+                    <tr>
+                        <td>Paprika powder</td>
+                        <td>1500-2500 <span>din. for kg</span></td>
+                        <td>1500-2000 <span>din. for kg</span></td>
+                        <td>/</td>
+                        <td>2000-2500 <span>din. for kg</span></td>
+                        <td>1800-2500 <span>din. for kg</span></td>
+                        <td>2000-2500 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Peppers</td>
+                        <td>100-250 <span>din. for kg</span></td>
+                        <td>180-300 <span>din. for kg</span></td>
+                        <td>70-130 <span>din. for kg</span></td>
+                        <td>180-250 <span>din. for kg</span></td>
+                        <td>150-250 <span>din. for kg</span></td>
+                        <td>150-250 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Tomatoes</td>
+                        <td>150-200 <span>din. for kg</span></td>
+                        <td>150-300 <span>din. for kg</span></td>
+                        <td>50-110 <span>din. for kg</span></td>
+                        <td>220-270 <span>din. for kg</span></td>
+                        <td>160-250 <span>din. for kg</span></td>
+                        <td>150-300 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Beans</td>
+                        <td>250-1500 <span>din. for kg</span></td>
+                        <td>240-1000 <span>din. for kg</span></td>
+                        <td>180-250 <span>din. for kg</span></td>
+                        <td>360-440 <span>din. for kg</span></td>
+                        <td>340-640 <span>din. for kg</span></td>
+                        <td>300-800 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Eggplants</td>
+                        <td>200 <span>din. for kg</span></td>
+                        <td>200-250 <span>din. for kg</span></td>
+                        <td>100-130 <span>din. for kg</span></td>
+                        <td>200 <span>din. for kg</span></td>
+                        <td>200-250 <span>din. for kg</span></td>
+                        <td>200 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Leek</td>
+                        <td>300 <span>din. for kg</span></td>
+                        <td>300 <span>din. for kg</span></td>
+                        <td>100-130 <span>din. for kg</span></td>
+                        <td>230 <span>din. for kg</span></td>
+                        <td>200 <span>din. for kg</span></td>
+                        <td>300 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Brussels sprouts</td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>250 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Radish</td>
+                        <td>- din. for bond</td>
+                        <td>60 din. for bond</td>
+                        <td>40-50 din. for bond</td>
+                        <td>- din. for bond</td>
+                        <td>/</td>
+                        <td>- din. for bond</td>
+                    </tr>
+                    <tr>
+                        <td>Mushrooms</td>
+                        <td>400 <span>din. for kg</span></td>
+                        <td>350 <span>din. for kg</span></td>
+                        <td>200 <span>din. for kg</span></td>
+                        <td>360 <span>din. for kg</span></td>
+                        <td>330-390 <span>din. for kg</span></td>
+                        <td>400 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Carrots</td>
+                        <td>150 <span>din. for kg</span></td>
+                        <td>180 <span>din. for kg</span></td>
+                        <td>40-100 <span>din. for kg</span></td>
+                        <td>130-180 <span>din. for kg</span></td>
+                        <td>130 <span>din. for kg</span></td>
+                        <td>150-180 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Spinach</td>
+                        <td>400 <span>din. for kg</span></td>
+                        <td>400 <span>din. for kg</span></td>
+                        <td>120-200 <span>din. for kg</span></td>
+                        <td>380 <span>din. for kg</span></td>
+                        <td>400 <span>din. for kg</span></td>
+                        <td>400-500 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Sremuš</td>
+                        <td>- din. for bond</td>
+                        <td>- din. for bond</td>
+                        <td>100 din. for bond</td>
+                        <td>- din. for bond</td>
+                        <td>- din. for bond</td>
+                        <td>- din. for bond</td>
+                    </tr>
+                    <tr>
+                        <td>Zucchini</td>
+                        <td>80-100 <span>din. for kg</span></td>
+                        <td>100 <span>din. for kg</span></td>
+                        <td>50-60 <span>din. for kg</span></td>
+                        <td>120-180 <span>din. for kg</span></td>
+                        <td>80-100 <span>din. for kg</span></td>
+                        <td>100-200 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Greens</td>
+                        <td>150 din. for bond</td>
+                        <td>150 din. for bond</td>
+                        <td>60-70 din. for bond</td>
+                        <td>120-150 din. for bond</td>
+                        <td>130 din. for bond</td>
+                        <td>150 din. for bond</td>
+                    </tr>
+                    <tr>
+                        <td>Lettuce</td>
+                        <td>100-120 din. for peace</td>
+                        <td>70-100 din. for peace</td>
+                        <td>700-900 din for box</td>
+                        <td>100 din. for peace</td>
+                        <td>100-120 din. for peace</td>
+                        <td>70-120 din. for peace</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-wrapper fruits animation-fade-in" id="fruits" *ngIf="fruits">
+            <table>
+                <tbody>
+                    <tr>
+                        <th class="date">
+                            <input type="date" id="date" [valueAsDate]="currentD">
+                        </th>
+                        <th class="markets">FUTOŠKA</th>
+                        <th class="markets">LIMANSKA</th>
+                        <th class="markets">KVANTAŠKA<br>(wholesale price)</th>
+                        <th class="markets">DETELINARSKA</th>
+                        <th class="markets">SATELITSKA</th>
+                        <th class="markets">RIBLJA</th>
+                    </tr>
+                    <tr>
+                        <td>Pineapples</td>
+                        <td>100 din. for peace</td>
+                        <td>350 <span>din. for kg</span></td>
+                        <td>180 <span>din. for kg</span></td>
+                        <td>- din. for peace</td>
+                        <td>280-300 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Almonds</td>
+                        <td>800-1200 <span>din. for kg</span></td>
+                        <td>700-1200 <span>din. for kg</span></td>
+                        <td>800 <span>din. for kg</span></td>
+                        <td>850-1100 <span>din. for kg</span></td>
+                        <td>900-1300 <span>din. for kg</span></td>
+                        <td>1000-1200 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Bananas</td>
+                        <td>150-200 <span>din. for kg</span></td>
+                        <td>200-250 <span>din. for kg</span></td>
+                        <td>2000-2400 din for box</td>
+                        <td>160-200 <span>din. for kg</span></td>
+                        <td>140-200 <span>din. for kg</span></td>
+                        <td>140-200 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Blueberries</td>
+                        <td>800-1200 <span>din. for kg</span></td>
+                        <td>1200 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>900 <span>din. for kg</span></td>
+                        <td>1200-1500 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Peaches</td>
+                        <td>160-220 <span>din. for kg</span></td>
+                        <td>200-400 <span>din. for kg</span></td>
+                        <td>80-110 <span>din. for kg</span></td>
+                        <td>180-200 <span>din. for kg</span></td>
+                        <td>150-350 <span>din. for kg</span></td>
+                        <td>200-250 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Melons</td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>130-150 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>100 <span>din. for kg</span></td>
+                        <td>120 <span>din. for kg</span></td>
+                        <td>100 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Quinces</td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>200 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Grapefruits</td>
+                        <td>300 <span>din. for kg</span></td>
+                        <td>300 <span>din. for kg</span></td>
+                        <td>100-120 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>330 <span>din. for kg</span></td>
+                        <td>300 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Grapes</td>
+                        <td>150-350 <span>din. for kg</span></td>
+                        <td>250-400 <span>din. for kg</span></td>
+                        <td>90-150 <span>din. for kg</span></td>
+                        <td>250-350 <span>din. for kg</span></td>
+                        <td>230-360 <span>din. for kg</span></td>
+                        <td>250-350 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Apples</td>
+                        <td>90-150 <span>din. for kg</span></td>
+                        <td>130-200 <span>din. for kg</span></td>
+                        <td>30-70 <span>din. for kg</span></td>
+                        <td>120-140 <span>din. for kg</span></td>
+                        <td>70-150 <span>din. for kg</span></td>
+                        <td>100-150 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Strawberries</td>
+                        <td>- din. for basket</td>
+                        <td>900-1000 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- din. for basket</td>
+                        <td>- din. for basket</td>
+                    </tr>
+                    <tr>
+                        <td>Apricots</td>
+                        <td>120 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Chestnuts</td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>1000 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Kiwis</td>
+                        <td>- din. for basket</td>
+                        <td>500-600 <span>din. for kg</span></td>
+                        <td>170-200 <span>din. for kg</span></td>
+                        <td>250 <span>din. for kg</span></td>
+                        <td>400 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Pears</td>
+                        <td>150 <span>din. for kg</span></td>
+                        <td>200-250 <span>din. for kg</span></td>
+                        <td>90-120 <span>din. for kg</span></td>
+                        <td>180-200 <span>din. for kg</span></td>
+                        <td>150-220 <span>din. for kg</span></td>
+                        <td>200-250 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Blackberries</td>
+                        <td>800 din. for basket</td>
+                        <td>1200 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- din. for basket</td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Hazelnuts</td>
+                        <td>900-1200 <span>din. for kg</span></td>
+                        <td>800-1100 <span>din. for kg</span></td>
+                        <td>800 <span>din. for kg</span></td>
+                        <td>850-1100 <span>din. for kg</span></td>
+                        <td>900-1300 <span>din. for kg</span></td>
+                        <td>1000-1200 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Lemons</td>
+                        <td>180-250 <span>din. for kg</span></td>
+                        <td>300 <span>din. for kg</span></td>
+                        <td>100-130 <span>din. for kg</span></td>
+                        <td>220-250 <span>din. for kg</span></td>
+                        <td>250-350 <span>din. for kg</span></td>
+                        <td>250-300 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Watermelons</td>
+                        <td>70-120 <span>din. for kg</span></td>
+                        <td>80-100 <span>din. for kg</span></td>
+                        <td>30-40 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>60-140 <span>din. for kg</span></td>
+                        <td>70-80 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Raspberries</td>
+                        <td>800 <span>din. for kg</span></td>
+                        <td>800 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>800 <span>din. for kg</span></td>
+                        <td>800 <span>din. for kg</span></td>
+                        <td>1000 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Tangerines</td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>400-500 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Mangos</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>200 <span>din. for kg</span></td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td>Pomegranates</td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>500 <span>din. for kg</span></td>
+                        <td>200-220 <span>din. for kg</span></td>
+                        <td>330 <span>din. for kg</span></td>
+                        <td>600 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Oranges</td>
+                        <td>300 <span>din. for kg</span></td>
+                        <td>300 <span>din. for kg</span></td>
+                        <td>80-160 <span>din. for kg</span></td>
+                        <td>250-260 <span>din. for kg</span></td>
+                        <td>250-350 <span>din. for kg</span></td>
+                        <td>200-300 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Nectarines</td>
+                        <td>130-150 <span>din. for kg</span></td>
+                        <td>200-250 <span>din. for kg</span></td>
+                        <td>80-110 <span>din. for kg</span></td>
+                        <td>180-200 <span>din. for kg</span></td>
+                        <td>200-350 <span>din. for kg</span></td>
+                        <td>200-250 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Walnuts in the shell</td>
+                        <td>350 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Walnuts without shell</td>
+                        <td>800-1300 <span>din. for kg</span></td>
+                        <td>700-1200 <span>din. for kg</span></td>
+                        <td>600-900 <span>din. for kg</span></td>
+                        <td>800-1000 <span>din. for kg</span></td>
+                        <td>1000-1200 <span>din. for kg</span></td>
+                        <td>1000-1100 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Papayas</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>300 <span>din. for kg</span></td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td>Hrušt cherries</td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>300 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Plums</td>
+                        <td>100-120 <span>din. for kg</span></td>
+                        <td>100-180 <span>din. for kg</span></td>
+                        <td>40-80 <span>din. for kg</span></td>
+                        <td>120-150 <span>din. for kg</span></td>
+                        <td>110-160 <span>din. for kg</span></td>
+                        <td>140-170 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Figs</td>
+                        <td>200 <span>din. for kg</span></td>
+                        <td>200-400 <span>din. for kg</span></td>
+                        <td>80 <span>din. for kg</span></td>
+                        <td>250 <span>din. for kg</span></td>
+                        <td>150-200 <span>din. for kg</span></td>
+                        <td>300 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Dried apricots</td>
+                        <td>1000 <span>din. for kg</span></td>
+                        <td>800-1200 <span>din. for kg</span></td>
+                        <td>700 <span>din. for kg</span></td>
+                        <td>900 <span>din. for kg</span></td>
+                        <td>1000 <span>din. for kg</span></td>
+                        <td>1200 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Dried plums</td>
+                        <td>500-600 <span>din. for kg</span></td>
+                        <td>440-500 <span>din. for kg</span></td>
+                        <td>360 <span>din. for kg</span></td>
+                        <td>500 <span>din. for kg</span></td>
+                        <td>600 <span>din. for kg</span></td>
+                        <td>600 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Dried figs</td>
+                        <td>600 <span>din. for kg</span></td>
+                        <td>500-600 <span>din. for kg</span></td>
+                        <td>400 <span>din. for kg</span></td>
+                        <td>650 <span>din. for kg</span></td>
+                        <td>600 <span>din. for kg</span></td>
+                        <td>600 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Cherries</td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>300 <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>- <span>din. for kg</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-wrapper other animation-fade-in" id="other" *ngIf="other">
+            <table>
+                <tbody>
+                    <tr>
+                        <th class="date">
+                            <input type="date" id="date" [valueAsDate]="currentD">
+                        </th>
+                        <th class="markets">FUTOŠKA</th>
+                        <th class="markets">LIMANSKA</th>
+                        <th class="markets">KVANTAŠKA<br>(wholesale price)</th>
+                        <th class="markets">DETELINARSKA</th>
+                        <th class="markets">SATELITSKA</th>
+                        <th class="markets">RIBLJA</th>
+                    </tr>
+                    <tr>
+                        <td>Eggs</td>
+                        <td>16-22.00 din. for peace</td>
+                        <td>10-23.00 din. for peace</td>
+                        <td>12-16.00 din. for peace</td>
+                        <td>13-23.00 din. for peace</td>
+                        <td>15-24.00 din. for peace</td>
+                        <td>15-24.00 din. for peace</td>
+                    </tr>
+                    <tr>
+                        <td>Kajmak</td>
+                        <td>1500 <span>din. for kg</span></td>
+                        <td>1500 <span>din. for kg</span></td>
+                        <td>/</td>
+                        <td>1200-1500 <span>din. for kg</span></td>
+                        <td>1500 <span>din. for kg</span></td>
+                        <td>1400-1500 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Cow cheese</td>
+                        <td>550-1400 <span>din. for kg</span></td>
+                        <td>560-1200 <span>din. for kg</span></td>
+                        <td>/</td>
+                        <td>550-600 <span>din. for kg</span></td>
+                        <td>500-1300 <span>din. for kg</span></td>
+                        <td>500-1500 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Honey</td>
+                        <td>800-1100 <span>din. for kg</span></td>
+                        <td>700-1500 <span>din. for kg</span></td>
+                        <td>/</td>
+                        <td>900-1200 <span>din. for kg</span></td>
+                        <td>900-1400 <span>din. for kg</span></td>
+                        <td>900-1200 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Cream</td>
+                        <td>1000 <span>din. for kg</span></td>
+                        <td>900 <span>din. for kg</span></td>
+                        <td>/</td>
+                        <td>- <span>din. for kg</span></td>
+                        <td>1000 <span>din. for kg</span></td>
+                        <td>1000-1200 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Hake/fillet</td>
+                        <td>470-925 <span>din. for kg</span></td>
+                        <td>530-900 <span>din. for kg</span></td>
+                        <td>/</td>
+                        <td>529-990 <span>din. for kg</span></td>
+                        <td>489-989 <span>din. for kg</span></td>
+                        <td>550-959 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Trout/cleaned</td>
+                        <td>690-869 <span>din. for kg</span></td>
+                        <td>700-870 <span>din. for kg</span></td>
+                        <td>/</td>
+                        <td>700-889 <span>din. for kg</span></td>
+                        <td>849 <span>din. for kg</span></td>
+                        <td>685-869 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Chicken</td>
+                        <td>380 <span>din. for kg</span></td>
+                        <td>400 <span>din. for kg</span></td>
+                        <td>/</td>
+                        <td>380-400 <span>din. for kg</span></td>
+                        <td>400 <span>din. for kg</span></td>
+                        <td>380-400 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Carp/cleaned/steak</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>/</td>
+                        <td>849-1299 <span>din. for kg</span></td>
+                        <td>/</td>
+                    </tr>
+                    <tr>
+                        <td>Perch/cleaned</td>
+                        <td>1300-1500 <span>din. for kg</span></td>
+                        <td>1100-1450 <span>din. for kg</span></td>
+                        <td>/</td>
+                        <td>1150-1500 <span>din. for kg</span></td>
+                        <td>1100-1390 <span>din. for kg</span></td>
+                        <td>1300-1700 <span>din. for kg</span></td>
+                    </tr>
+                    <tr>
+                        <td>Catfish/steak</td>
+                        <td>950-1600 <span>din. for kg</span></td>
+                        <td>1050-1800 <span>din. for kg</span></td>
+                        <td>/</td>
+                        <td>1050-1850 <span>din. for kg</span></td>
+                        <td>1150-1990 <span>din. for kg</span></td>
+                        <td>1150-1900 <span>din. for kg</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section><!-- ======= Tables Section End ======= -->
+</body>

@@ -1,0 +1,54 @@
+<body>
+    <!-- ======= Cart offcanvas Section ======= -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <div class="offcanvas-title" id="offcanvasRightLabel">
+                <div class="total-wrapper">Total: <span id="total">0</span><span id="total-unit"> din</span></div>
+            </div>
+            <button type="button" id="innerOffcanvasBtn" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <button class="btn btn-success mx-3 fw-bold buy-btn" data-bs-dismiss="offcanvas" aria-label="Close">PROCEED TO
+            CHECKOUT</button>
+        <p class="offcanvas-amount"><span class="counter">0</span> items in cart</p>
+        <div class="offcanvas-body" id="my-offcanvas-cart">
+
+        </div>
+    </div>
+    <!-- ======= Cart offcanvas Section End ======= -->
+
+    <!-- ======= Image Title Section ======= -->
+    <section class="image-title">
+        <h1 class="headline">Novi Sad Farmers Market App</h1>
+    </section><!-- ======= Image Title Section End ======= -->
+
+    <!-- ======= Buy Section End ======= -->
+    <section class="buy">
+
+        <div class="cards-headline-wrapper">
+            <h2>Product categories</h2>
+            <p>choose the category</p>
+        </div>
+
+        <div class="btn-group buttons-wrapper" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check cab" name="btnradio" id="mybtnradio1" autocomplete="off"
+                (click)="vegetablesShow()">
+            <label class="btn btn-outline-success ab" id="button1" for="mybtnradio1">Vegetables</label>
+
+            <input type="radio" class="btn-check cab " name="btnradio" id="mybtnradio2" autocomplete="off"
+                (click)="fruitsShow()">
+            <label class="btn btn-outline-success ab" id="button2" for="mybtnradio2">Fruits</label>
+
+            <input type="radio" class="btn-check cab" name="btnradio" id="mybtnradio3" autocomplete="off"
+                (click)="otherShow()">
+            <label class="btn btn-outline-success ab" id="button3" for="mybtnradio3">Other</label>
+        </div>
+
+        <div class="card-wrapper grid vegetables-card" *ngIf="vegetables"></div>
+
+        <div class="card-wrapper grid fruits-card" *ngIf="fruits"></div>
+
+        <div class="card-wrapper grid other-card" *ngIf="other"></div>
+
+    </section><!-- ======= Buy Section End ======= -->
+</body>

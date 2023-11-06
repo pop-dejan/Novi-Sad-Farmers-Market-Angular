@@ -1,0 +1,129 @@
+body {
+    background-color: var(--color-body-bg);
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.animation-right {
+    animation: bounce-in-right 1.4s;
+}
+
+@keyframes bounce-in-right {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(2000px);
+    }
+
+    60% {
+
+        -webkit-transform: translateX(30px);
+    }
+
+    80% {
+        -webkit-transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+//** Image-Title Section **/
+.image-title {
+    background-image: url('../../assets/img/seasonal-products-image-main.jpg');
+    background-size: cover;
+    background-position: 50%;
+    margin: 70px var(--margin-start) 0;
+    min-height: 250px;
+    display: flex;
+
+    .headline {
+        text-align: center;
+        align-self: center;
+        font-size: clamp(4.5rem, 2.5vw, 4.5rem);
+        color: white;
+        font-weight: 500;
+        width: 100%;
+    }
+}
+
+//** Image-Title Section End **/
+
+//** Info Section **/
+.info {
+    margin: 50px var(--margin-start) 0;
+
+    .next {
+        cursor: pointer;
+    }
+
+    .month {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid black;
+        opacity: 0;
+
+        h1 {
+            font-weight: 700;
+        }
+
+        .text {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .app-text {
+            font-size: 18.2px;
+            font-weight: 700;
+        }
+    }
+
+    .last {
+        border-bottom: none;
+    }
+}
+
+//** Info Section End **/
+
+@media (max-width: 992px) {
+
+    //** Image-Title Section **/
+    .image-title {
+        margin-left: var(--margin-end);
+        margin-right: var(--margin-end);
+    }
+
+    //** Image-Title Section End **/
+
+    //** Info Section **/
+    .info {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    //** Info Section End **/
+}
+
+@media (max-width: 600px) {
+
+    //** Image-Title Section **/
+    .image-title {
+        .headline {
+            font-size: clamp(3.2rem, 2.5vw, 3.2rem);
+        }
+    }
+
+    //** Image-Title Section End **/
+}
+
+@media (max-width: 562px) {
+    #first-month {
+        animation: none;
+    }
+
+    #second-month {
+        animation: none;
+    }
+
+}

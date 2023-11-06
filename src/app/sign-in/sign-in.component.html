@@ -1,0 +1,52 @@
+<body>
+    <!-- ======= Sign-In Section ======= -->
+    <section class="sign-in">
+        <div class="row">
+            <div class="col-lg-12 p-0">
+                <div class="card border-0">
+                    <div class="card-body p-0">
+                        <div class="col-lg-12">
+                            <div class="p-4">
+                                <div class="mb-5">
+                                    <h3 class="h4 font-weight-bold text-theme">Sign in to our new app!</h3>
+                                </div>
+                                <form role="form" [formGroup]="myForm">
+                                    <div class="form-group">
+                                        <label for="email">Email address</label>
+                                        <input type="text" class="form-control control-2" id="email"
+                                            formControlName="email" (input)="toggleInputEmail()" />
+                                        <div id="email_error" class="form-text mb-3">
+                                            <p id="email-blank" class="none">Please enter e-mail address!</p>
+                                            <p id="email-invalid" class="none">Please enter valid e-mail address!</p>
+                                            <p id="email-match" class="none">Email or password are invalid!</p>
+                                            <p id="email-match2" class="none">There is no account with this email
+                                                address!</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control control-2 psw" id="password"
+                                            formControlName="password" (input)="toggleInputPassword()" />
+                                        <div id="password_error" class="form-text mb-3">
+                                            <p id="password-blank" class="none">Please enter password!</p>
+                                            <p id="password-length" class="none">Password must have at least 6
+                                                characters!</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1"
+                                            (click)="togglePassword()">
+                                        <label class="form-check-label" for="exampleCheck1">Show Password</label>
+                                    </div>
+                                    <p class="text-muted mt-4 mb-3">Do not have an account? <a 
+                                            (click)="navigatePage('sign-up')" class="text-primary next ml-1">Register</a></p>
+                                    <button type="submit" class="btn btn-theme" (click)="onSubmit($event)">Login</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- ======= Sign-In Section End ======= -->
+</body>
