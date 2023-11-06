@@ -1,27 +1,2 @@
-# NoviSadFarmersMarket
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Project represents web presentation of Novi Sad's farmers markets, information about their history, how they function today, some basic information like working hours, contact information. Website has information about nine Novi Sad's farmers markets and each has its own page. There is also Market Barometer section that has information about prices of different products at various markets. Main feature of this website is shopping application. You can choose various products to buy, choose from which market you want to buy it from based on the price of that product at that particular market. this is the updated version on JavaScript version of this project that is build with Angular. This application have some new features and unlike Javascript version this one communicates with database, create new users and their orders etc.
+Angular application communicates with firebase realtime database from where it fetches necessary informations, create new users, and add user orders. Application also uses firebase authentication for authenticating new and existing users granting them access to their information in database.
